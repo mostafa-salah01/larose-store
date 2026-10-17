@@ -5,11 +5,11 @@
 const CONFIG = {
   storeName: "La Rose Beauty & Cosmetics",
   storeTagline: "جمالك يبدأ بروتين يناسبك | منتجات عناية مختارة بعناية",
-  // رقم الواتساب بصيغة دولية بدون علامة + (مثال لمصر: 201012345678)
-  whatsappNumber: "201012345678",
-  whatsappDisplay: "+20 101 234 5678",
-  // الدومين الأساسي للمتجر (استبدله برابط GitHub Pages أو نطاقك الخاص)
-  domain: "https://example.com",
+  // رقم الواتساب بصيغة دولية بدون علامة + (مثال لمصر: 201029424008)
+  whatsappNumber: "201029424008",
+  whatsappDisplay: "+20 10 2942 4008",
+  // الدومين الأساسي للمتجر على GitHub Pages
+  domain: "https://mostafa-salah01.github.io/larose-store",
   currency: "ج.م",
   shippingFee: 50,
   freeShippingThreshold: 500,
@@ -40,7 +40,7 @@ const CONFIG = {
     "البحر الأحمر",
     "مطروح"
   ],
-  supportEmail: "care@larosestore.com",
+  supportEmail: "mmarwarefaat123@gmail.com",
   workingHours: "يومياً من 10 صباحاً حتى 10 مساءً"
 };
 

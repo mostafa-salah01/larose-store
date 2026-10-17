@@ -4,4 +4,4 @@ Disallow: /cart.html
 Disallow: /checkout.html
 Disallow: /order-success.html
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://mostafa-salah01.github.io/larose-store/sitemap.xml

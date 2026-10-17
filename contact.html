@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon / أيقونة الموقع وشريط التبويبات -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="images/favicon.png">
   <title>تواصل معنا | La Rose Beauty & Cosmetics</title>
   <meta name="description" content="تواصل مع فريق خدمة عملاء لا روز عبر واتساب أو البريد الإلكتروني لأي استفسارات عن الطلبات أو استشارات الروتين.">
-  <link rel="canonical" href="https://example.com/contact.html">
+  <link rel="canonical" href="https://mostafa-salah01.github.io/larose-store/contact.html">
   <meta property="og:title" content="تواصل معنا | La Rose Beauty">
   <link rel="preload" href="images/larose-logo.png" as="image">
   <link rel="stylesheet" href="css/style.css">
@@ -79,8 +83,8 @@
         <div class="form-card">
           <h2 style="font-size: 18px; font-weight: 800; color: var(--berry); margin-bottom: 16px;">قنوات التواصل الرسمية</h2>
           <div style="font-size: 15px; line-height: 2;">
-            <div><strong>رقم الواتساب:</strong> <span dir="ltr" id="disp-wa">+20 101 234 5678</span></div>
-            <div><strong>البريد الإلكتروني:</strong> care@larosestore.com</div>
+            <div><strong>رقم الواتساب:</strong> <span dir="ltr" id="disp-wa">+20 10 2942 4008</span></div>
+            <div><strong>البريد الإلكتروني:</strong> <span id="disp-email">mmarwarefaat123@gmail.com</span></div>
             <div><strong>أوقات العمل:</strong> يومياً من 10 صباحاً إلى 10 مساءً</div>
             <div><strong>نطاق التوصيل:</strong> جميع محافظات جمهورية مصر العربية</div>
           </div>
@@ -143,6 +147,8 @@
       if (window.CONFIG) {
         const waDisp = document.getElementById('disp-wa');
         if (waDisp) waDisp.textContent = window.CONFIG.whatsappDisplay || window.CONFIG.whatsappNumber;
+        const emailDisp = document.getElementById('disp-email');
+        if (emailDisp && window.CONFIG.supportEmail) emailDisp.textContent = window.CONFIG.supportEmail;
       }
     });
   </script>

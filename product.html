@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon / أيقونة الموقع وشريط التبويبات -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="images/favicon.png">
   <title id="page-title">تفاصيل المنتج | La Rose Beauty & Cosmetics</title>
   <meta name="description" id="meta-description" content="تسوقي منتجات العناية الأصلية من لا روز مع تفاصيل الاستخدام والمكونات وتوصيل سريع والدفع عند الاستلام.">
-  <link rel="canonical" id="canonical-link" href="https://example.com/product.html">
+  <link rel="canonical" id="canonical-link" href="https://mostafa-salah01.github.io/larose-store/product.html">
   <meta property="og:title" id="og-title" content="منتج La Rose">
   <meta property="og:description" id="og-desc" content="منتجات عناية وتجميل مختارة بعناية.">
   <meta property="og:image" content="images/og-share-image.jpg">
@@ -18,7 +22,7 @@
     "@context": "https://schema.org/",
     "@type": "Product",
     "name": "منتج تجميل وعناية",
-    "image": "https://example.com/images/og-share-image.jpg",
+    "image": "https://mostafa-salah01.github.io/larose-store/images/og-share-image.jpg",
     "description": "منتجات عناية بالبشرة والشعر من لا روز",
     "brand": {
       "@type": "Brand",
@@ -26,7 +30,7 @@
     },
     "offers": {
       "@type": "Offer",
-      "url": "https://example.com/product.html",
+      "url": "https://mostafa-salah01.github.io/larose-store/product.html",
       "priceCurrency": "EGP",
       "price": "200",
       "availability": "https://schema.org/InStock",
@@ -299,7 +303,7 @@
       const metaDesc = document.getElementById('meta-description');
       if (metaDesc) metaDesc.content = product.shortDescription;
       const canonical = document.getElementById('canonical-link');
-      if (canonical) canonical.href = `https://example.com/product.html?slug=${product.slug}`;
+      if (canonical) canonical.href = `https://mostafa-salah01.github.io/larose-store/product.html?slug=${product.slug}`;
 
       // تعبئة البيانات في الصفحة
       document.getElementById('breadcrumb-product-name').textContent = product.name;
