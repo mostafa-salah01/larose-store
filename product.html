@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">تفاصيل المنتج | La Rose Beauty & Cosmetics</title>
+  <meta name="description" id="meta-description" content="تسوقي منتجات العناية الأصلية من لا روز مع تفاصيل الاستخدام والمكونات وتوصيل سريع والدفع عند الاستلام.">
+  <link rel="canonical" id="canonical-link" href="https://example.com/product.html">
+  <meta property="og:title" id="og-title" content="منتج La Rose">
+  <meta property="og:description" id="og-desc" content="منتجات عناية وتجميل مختارة بعناية.">
+  <meta property="og:image" content="images/og-share-image.jpg">
+  <link rel="preload" href="images/larose-logo.png" as="image">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Product JSON-LD Schema (السعر والتوفر فقط وبدون تقييم وهمي) -->
+  <script type="application/ld+json" id="product-schema">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "منتج تجميل وعناية",
+    "image": "https://example.com/images/og-share-image.jpg",
+    "description": "منتجات عناية بالبشرة والشعر من لا روز",
+    "brand": {
+      "@type": "Brand",
+      "name": "La Rose Botanicals"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://example.com/product.html",
+      "priceCurrency": "EGP",
+      "price": "200",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    }
+  }
+  </script>
+</head>
+<body style="padding-bottom: 70px;">
+  <div class="top-bar">
+    <span>🚚 توصيل سريع لجميع المحافظات | شحن مجاني للطلبات فوق 500 ج.م | دفع عند الاستلام</span>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <button type="button" class="menu-toggle" aria-label="فتح القائمة">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+        <a href="index.html" class="site-logo">
+          <img src="images/larose-logo.png" alt="La Rose Beauty & Cosmetics" width="160" height="48">
+        </a>
+        <div class="header-actions">
+          <a href="contact.html" class="action-btn whatsapp-dynamic-link" title="تواصل عبر واتساب" data-message="مرحباً لا روز، أود الاستفسار عن منتج">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          </a>
+          <button type="button" class="action-btn trigger-cart" aria-label="سلة المشتريات" title="السلة">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"></path></svg>
+            <span class="cart-badge" style="display: none;">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="القائمة الرئيسية">
+      <div class="container">
+        <ul class="nav-links">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="hair.html">الشعر</a></li>
+          <li><a href="skin.html">البشرة</a></li>
+          <li><a href="body.html">الجسم</a></li>
+          <li><a href="fragrance.html">العطور والمخمريات</a></li>
+          <li class="nav-highlight"><a href="offers.html">العروض والباقات</a></li>
+          <li><a href="new.html">الجديد</a></li>
+          <li><a href="routines.html">اختاري روتينك</a></li>
+          <li><a href="guide.html">دليل الجمال</a></li>
+          <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container" style="padding-top: 10px; padding-bottom: 56px;">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="مسار التنقل">
+      <a href="index.html">الرئيسية</a>
+      <span class="sep">/</span>
+      <a href="skin.html" id="breadcrumb-category-link">القسم</a>
+      <span class="sep">/</span>
+      <span class="current" id="breadcrumb-product-name">جاري التحميل...</span>
+    </nav>
+
+    <!-- Product Layout -->
+    <div class="product-detail-grid" id="product-detail-layout">
+      <!-- المعرض -->
+      <div class="product-gallery-box">
+        <div class="product-main-view" id="product-gallery-viewport">
+          <div class="product-svg-placeholder" style="width: 100%; height: 100%; border-radius: var(--radius-md);">
+            <svg viewBox="0 0 100 100" class="rose-vector" fill="none">
+              <circle cx="50" cy="50" r="46" fill="#FDF7F4" stroke="#EBDED2" stroke-width="1.5"/>
+              <path d="M50 22C42 22 34 30 34 40C34 52 48 64 50 78C52 64 66 52 66 40C66 30 58 22 50 22Z" fill="#E85A8C" fill-opacity="0.15" stroke="#E85A8C" stroke-width="1.8"/>
+              <circle cx="50" cy="42" r="6" fill="#E85A8C"/>
+            </svg>
+            <span class="product-category-sublabel" id="gallery-sublabel">La Rose</span>
+          </div>
+        </div>
+        <div style="display: flex; gap: 10px; justify-content: center; width: 100%;">
+          <div style="border: 2px solid var(--pink); border-radius: 8px; padding: 6px; font-size: 12px; font-weight: 700; color: var(--berry);">واجهة المنتج</div>
+          <div style="border: 1px solid var(--border); border-radius: 8px; padding: 6px; font-size: 12px; color: var(--ink-muted);">المكونات والحجم</div>
+          <div style="border: 1px solid var(--border); border-radius: 8px; padding: 6px; font-size: 12px; color: var(--ink-muted);">طريقة الاستخدام</div>
+        </div>
+      </div>
+
+      <!-- معلومات المنتج -->
+      <div class="product-info-panel">
+        <div style="font-size: 13.5px; font-weight: 700; color: var(--pink); margin-bottom: 6px;" id="prod-brand">علامة لا روز</div>
+        <h1 id="prod-name">اسم المنتج</h1>
+        
+        <div class="product-detail-price">
+          <span class="price-now" id="prod-price">0 ج.م</span>
+          <span class="price-was" id="prod-old-price" style="display: none;">0 ج.م</span>
+        </div>
+
+        <div class="stock-status" id="prod-stock">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>متوفر في المخزون وجاهز للشحن الفوري</span>
+        </div>
+
+        <p style="font-size: 16px; color: var(--ink-light); margin-bottom: 20px; line-height: 1.6;" id="prod-desc">
+          وصف مختصر للفائدة...
+        </p>
+
+        <!-- اختيار الحجم -->
+        <div class="size-selector" id="size-selector-wrap">
+          <label>اختاري الحجم أو السعة:</label>
+          <div class="size-options" id="size-options-container">
+            <!-- سيتم ملؤه بواسطة JS -->
+          </div>
+        </div>
+
+        <!-- الكمية وزر الشراء -->
+        <div class="product-action-row">
+          <div class="quantity-stepper">
+            <button type="button" id="btn-qty-minus" aria-label="تقليل الكمية">-</button>
+            <input type="text" id="input-qty" value="1" readonly>
+            <button type="button" id="btn-qty-plus" aria-label="زيادة الكمية">+</button>
+          </div>
+          <button type="button" class="btn btn-primary" id="btn-add-main-cart" style="flex: 1;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/>
+            </svg>
+            <span>أضيفي للسلة</span>
+          </button>
+        </div>
+
+        <!-- زر استشارة واتساب: هل أساعدك في الاختيار؟ -->
+        <div style="margin-bottom: 28px;">
+          <a href="#" class="btn btn-secondary btn-block whatsapp-dynamic-link" id="btn-wa-consult" data-message="مرحباً لا روز، هل يمكنك مساعدتي في معرفة هل هذا المنتج مناسب لنوع بشرتي/شعري؟">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <span>هل أساعدك في الاختيار؟ (محادثة واتساب)</span>
+          </a>
+        </div>
+
+        <!-- الأكورديون للتفاصيل الشاملة -->
+        <div class="product-accordions">
+          <div class="accordion-box">
+            <div class="accordion-header">
+              <span>مناسب لمن؟ (نوع البشرة والشعر)</span>
+              <span>+</span>
+            </div>
+            <div class="accordion-body" id="acc-suitable">...</div>
+          </div>
+
+          <div class="accordion-box">
+            <div class="accordion-header">
+              <span>طريقة الاستخدام الصحيحة</span>
+              <span>+</span>
+            </div>
+            <div class="accordion-body" id="acc-how-to-use">...</div>
+          </div>
+
+          <div class="accordion-box">
+            <div class="accordion-header">
+              <span>قائمة المكونات الكاملة</span>
+              <span>+</span>
+            </div>
+            <div class="accordion-body" id="acc-ingredients">...</div>
+          </div>
+
+          <div class="accordion-box">
+            <div class="accordion-header">
+              <span>التحذيرات واختبار الحساسية (Patch Test)</span>
+              <span>+</span>
+            </div>
+            <div class="accordion-body" id="acc-warnings">...</div>
+          </div>
+
+          <div class="accordion-box">
+            <div class="accordion-header">
+              <span>الأصالة، الشحن والاسترجاع</span>
+              <span>+</span>
+            </div>
+            <div class="accordion-body" id="acc-shipping">
+              <strong>أصالة المنتج:</strong> جميع تركيباتنا مصنعة ومختبرة بأعلى معايير الأمان ومسجلة رسميًا.<br>
+              <strong>الشحن والتوصيل:</strong> شحن لجميع محافظات مصر خلال 2 إلى 4 أيام عمل، مع شحن مجاني للطلبات فوق 500 ج.م والدفع عند الاستلام.<br>
+              <strong>الاستبدال والاسترجاع:</strong> حق استبدال المنتجات غير المفتوحة خلال 14 يوماً وفق شروط النظافة والسلامة.
+            </div>
+          </div>
+
+          <div class="accordion-box">
+            <div class="accordion-header">
+              <span>أسئلة شائعة عن هذا المنتج</span>
+              <span>+</span>
+            </div>
+            <div class="accordion-body">
+              <strong>س: كم يدوم المنتج مع الاستخدام اليومي؟</strong><br>
+              ج: يدوم ما بين شهرين إلى 3 أشهر مع الالتزام بالكميات الموصى بها.<br><br>
+              <strong>س: هل يناسب الحوامل والمرضعات؟</strong><br>
+              ج: التركيبة تجميلية ولطيفة وخالية من الريتينويدات، وننصح دائماً بمراجعة الطبيب الخاص بك لجميع مستحضرات العناية.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- قسم التقييمات: جاهز بدون تقييمات وهمية -->
+    <div class="section" style="padding: 32px 0;">
+      <div class="reviews-honest-box">
+        <h3 class="reviews-honest-title">تقييمات العميلات لهذا المنتج</h3>
+        <p class="reviews-honest-desc">نحن ملتزمون بالشفافية الكاملة بعدم عرض تقييمات مزيفة. جربي المنتج وكوني أول من يشاركنا رأيها الصادق لمساعدة باقي الجميلات!</p>
+        <button type="button" class="btn btn-secondary" onclick="alert('شكراً لاهتمامك! سيتم فتح نموذج التقييمات للعميلات بعد استلام الطلب وتأكيده.')">
+          كوني أول من تقيّم هذا المنتج
+        </button>
+      </div>
+    </div>
+
+    <!-- منتجات مكملة تقترح استخدامها مع هذا المنتج -->
+    <div class="section" style="padding: 24px 0;">
+      <h3 style="font-size: 22px; color: var(--berry); margin-bottom: 20px;">منتجات مكملة لنتائج أفضل:</h3>
+      <div class="products-grid" id="complementary-products-grid"></div>
+    </div>
+
+    <!-- منتجات شوهدت مؤخراً (localStorage) -->
+    <div class="section" style="padding: 24px 0;" id="recent-viewed-section">
+      <h3 style="font-size: 22px; color: var(--berry); margin-bottom: 20px;">منتجات شاهدتِها مؤخراً:</h3>
+      <div class="products-grid" id="recent-products-grid"></div>
+    </div>
+  </main>
+
+  <!-- زر الشراء الثابت أسفل الشاشة على الموبايل -->
+  <div class="mobile-sticky-buy-bar">
+    <div>
+      <div style="font-size: 13px; color: var(--ink-muted);" id="mobile-sticky-name">اسم المنتج</div>
+      <div style="font-size: 18px; font-weight: 800; color: var(--berry);" id="mobile-sticky-price">0 ج.م</div>
+    </div>
+    <button type="button" class="btn btn-primary" id="btn-mobile-buy" style="height: 44px; padding: 0 20px;">
+      أضيفي للسلة
+    </button>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 La Rose Beauty & Cosmetics. جميع الحقوق محفوظة.</p>
+        <p><a href="index.html">العودة للرئيسية</a> | <a href="contact.html">تواصل معنا</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer"></aside>
+
+  <script src="js/config.js" defer></script>
+  <script src="data/products.js" defer></script>
+  <script src="data/routines.js" defer></script>
+  <script src="data/articles.js" defer></script>
+  <script src="js/api.js" defer></script>
+  <script src="js/cart.js" defer></script>
+  <script src="js/app.js" defer></script>
+
+  <script defer>
+    window.addEventListener('DOMContentLoaded', async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      let slug = urlParams.get('slug');
+      if (!slug) {
+        // إذا لم يُحدد slug نأخذ أول منتج كافتراضي
+        slug = (window.PRODUCTS && window.PRODUCTS[0]?.slug) || 'gentle-rose-hydrating-cleanser';
+      }
+
+      const product = await window.API.getProduct(slug);
+      if (!product) {
+        window.location.href = 'index.html';
+        return;
+      }
+
+      // إضافة المنتج إلى قائمة المشاهدات الأخيرة
+      window.API.addRecentProductSlug(slug);
+
+      // تحديث العناوين وSEO
+      document.title = `${product.name} | La Rose Beauty`;
+      const metaDesc = document.getElementById('meta-description');
+      if (metaDesc) metaDesc.content = product.shortDescription;
+      const canonical = document.getElementById('canonical-link');
+      if (canonical) canonical.href = `https://example.com/product.html?slug=${product.slug}`;
+
+      // تعبئة البيانات في الصفحة
+      document.getElementById('breadcrumb-product-name').textContent = product.name;
+      const catMap = { hair: 'الشعر', skin: 'البشرة', body: 'الجسم', fragrance: 'العطور والمخمريات', 'gifts-bundles': 'العروض والباقات' };
+      const catLink = document.getElementById('breadcrumb-category-link');
+      if (catLink) {
+        catLink.textContent = catMap[product.category] || 'المنتجات';
+        catLink.href = `${product.category}.html`;
+      }
+
+      document.getElementById('prod-brand').textContent = product.brand || 'La Rose';
+      document.getElementById('prod-name').textContent = product.name;
+      document.getElementById('prod-price').textContent = `${product.price} ج.م`;
+      document.getElementById('mobile-sticky-name').textContent = product.name;
+      document.getElementById('mobile-sticky-price').textContent = `${product.price} ج.م`;
+
+      if (product.oldPrice && product.oldPrice > product.price) {
+        const oldP = document.getElementById('prod-old-price');
+        oldP.textContent = `${product.oldPrice} ج.م`;
+        oldP.style.display = 'inline-block';
+      }
+
+      document.getElementById('prod-desc').textContent = product.shortDescription;
+      document.getElementById('gallery-sublabel').textContent = product.brand || 'La Rose';
+
+      // الأكورديون
+      document.getElementById('acc-suitable').textContent = product.suitableFor;
+      document.getElementById('acc-how-to-use').textContent = product.howToUse;
+      document.getElementById('acc-ingredients').textContent = product.ingredients;
+      document.getElementById('acc-warnings').innerHTML = `${product.warnings}<br><br><a href="guide-patch-test.html" style="color: var(--pink); font-weight: 700;">تعرفي على كيفية إجراء اختبار الحساسية بالتفصيل هنا ←</a>`;
+
+      // خيارات الحجم
+      const sizeContainer = document.getElementById('size-options-container');
+      let selectedSize = (product.sizes && product.sizes[0]) || 'قياسي';
+      if (sizeContainer && product.sizes) {
+        sizeContainer.innerHTML = product.sizes.map((s, idx) => `
+          <button type="button" class="size-chip ${idx === 0 ? 'selected' : ''}" data-size="${s}">${s}</button>
+        `).join('');
+
+        sizeContainer.querySelectorAll('.size-chip').forEach(chip => {
+          chip.addEventListener('click', () => {
+            sizeContainer.querySelectorAll('.size-chip').forEach(c => c.classList.remove('selected'));
+            chip.classList.add('selected');
+            selectedSize = chip.getAttribute('data-size');
+          });
+        });
+      }
+
+      // الكمية
+      let currentQty = 1;
+      const qtyInput = document.getElementById('input-qty');
+      document.getElementById('btn-qty-minus')?.addEventListener('click', () => {
+        if (currentQty > 1) {
+          currentQty--;
+          if (qtyInput) qtyInput.value = currentQty;
+        }
+      });
+      document.getElementById('btn-qty-plus')?.addEventListener('click', () => {
+        currentQty++;
+        if (qtyInput) qtyInput.value = currentQty;
+      });
+
+      // إضافة للسلة
+      const handleAddToCart = () => {
+        window.Cart.addItem(product, selectedSize, currentQty);
+      };
+      document.getElementById('btn-add-main-cart')?.addEventListener('click', handleAddToCart);
+      document.getElementById('btn-mobile-buy')?.addEventListener('click', handleAddToCart);
+
+      // زر استشارة واتساب
+      const btnWa = document.getElementById('btn-wa-consult');
+      if (btnWa && window.CONFIG) {
+        const msg = encodeURIComponent(`مرحباً لا روز، أود الاستفسار عن منتج "${product.name}" لمعرفة هل يناسب حالتي؟`);
+        btnWa.href = `https://wa.me/${window.CONFIG.whatsappNumber}?text=${msg}`;
+      }
+
+      // تفعيل الأكورديون
+      document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+          const body = header.nextElementSibling;
+          const isOpen = body.style.display === 'block';
+          body.style.display = isOpen ? 'none' : 'block';
+          header.querySelector('span:last-child').textContent = isOpen ? '+' : '-';
+        });
+      });
+
+      // منتجات مكملة
+      const complementary = await window.API.getProducts({ category: product.category, limit: 3 });
+      const compFiltered = complementary.filter(p => p.slug !== product.slug).slice(0, 2);
+      const compGrid = document.getElementById('complementary-products-grid');
+      if (compGrid && compFiltered.length > 0) {
+        compGrid.innerHTML = compFiltered.map(p => window.App.renderProductCard(p)).join('');
+      }
+
+      // منتجات شوهدت مؤخراً
+      const recentProds = await window.API.getRecentProducts(product.slug);
+      const recentGrid = document.getElementById('recent-products-grid');
+      const recentSec = document.getElementById('recent-viewed-section');
+      if (recentProds.length > 0 && recentGrid) {
+        recentGrid.innerHTML = recentProds.slice(0, 4).map(p => window.App.renderProductCard(p)).join('');
+      } else if (recentSec) {
+        recentSec.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

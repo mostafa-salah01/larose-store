@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إتمام الطلب | La Rose Beauty & Cosmetics</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preload" href="images/larose-logo.png" as="image">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="top-bar">
+    <span>🚚 توصيل سريع لجميع المحافظات | شحن مجاني للطلبات فوق 500 ج.م | دفع عند الاستلام</span>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="site-logo">
+          <img src="images/larose-logo.png" alt="La Rose Beauty & Cosmetics" width="160" height="48">
+        </a>
+        <div style="font-size: 14.5px; font-weight: 700; color: var(--berry);">
+          إتمام الطلب السريع (بدون تسجيل)
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 24px; padding-bottom: 64px;">
+    <h1 style="font-size: 26px; font-weight: 800; color: var(--berry); margin-bottom: 24px;">بيانات الشحن والتوصيل</h1>
+
+    <form id="checkout-form">
+      <div class="checkout-grid">
+        <!-- بيانات العميل والتوصيل -->
+        <div>
+          <div class="form-card" style="margin-bottom: 24px;">
+            <h2 style="font-size: 18px; font-weight: 800; color: var(--berry); margin-bottom: 16px;">1. معلومات المستلم</h2>
+            
+            <div class="form-group">
+              <label for="customerName">الاسم بالكامل *</label>
+              <input type="text" id="customerName" class="form-control" placeholder="مثال: سارة أحمد محمود" required>
+            </div>
+
+            <div class="form-group">
+              <label for="customerPhone">رقم الهاتف (للتواصل مع المندوب وواتساب) *</label>
+              <input type="tel" id="customerPhone" class="form-control" placeholder="مثال: 01012345678" required>
+            </div>
+
+            <div class="form-group">
+              <label for="customerGov">المحافظة *</label>
+              <select id="customerGov" class="form-control" required>
+                <option value="">اختاري المحافظة...</option>
+                <!-- سيتم ملؤها من CONFIG.governorates -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="customerCity">المدينة / المنطقة / الحي *</label>
+              <input type="text" id="customerCity" class="form-control" placeholder="مثال: التجمع الخامس، المعادي، سموحة..." required>
+            </div>
+
+            <div class="form-group">
+              <label for="customerAddress">العنوان بالتفصيل (اسم الشارع، رقم العمارة، الشقة) *</label>
+              <input type="text" id="customerAddress" class="form-control" placeholder="مثال: شارع التسعين، عمارة 15، شقة 4" required>
+            </div>
+
+            <div class="form-group">
+              <label for="customerNotes">ملاحظات التوصيل (اختياري)</label>
+              <textarea id="customerNotes" class="form-control" rows="2" placeholder="أي إرشادات خاصة لمندوب الشحن أو وقت مفضل للاتصال..."></textarea>
+            </div>
+          </div>
+
+          <!-- طريقة الدفع -->
+          <div class="form-card">
+            <h2 style="font-size: 18px; font-weight: 800; color: var(--berry); margin-bottom: 16px;">2. طريقة الدفع</h2>
+            
+            <div class="payment-methods-list">
+              <label class="payment-method-card active">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <input type="radio" name="paymentMethod" value="cod" checked>
+                  <div>
+                    <strong>الدفع عند الاستلام (نقداً)</strong>
+                    <div style="font-size: 13px; color: var(--ink-muted);">ادفعي للمندوب بعد معاينة طلبيتك واستلامها بيدك.</div>
+                  </div>
+                </div>
+                <span style="color: #16A34A; font-weight: 700; font-size: 13px;">متاح حالياً</span>
+              </label>
+
+              <label class="payment-method-card disabled">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <input type="radio" name="paymentMethod" value="card" disabled>
+                  <div>
+                    <strong>بطاقة بنكية (Visa / MasterCard)</strong>
+                    <div style="font-size: 13px; color: var(--ink-muted);">دفع آمن ومشفر عبر بوابات البنوك.</div>
+                  </div>
+                </div>
+                <span class="badge-soon">قريباً</span>
+              </label>
+
+              <label class="payment-method-card disabled">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <input type="radio" name="paymentMethod" value="ewallet" disabled>
+                  <div>
+                    <strong>محافظ إلكترونية / إنستاباي (InstaPay)</strong>
+                    <div style="font-size: 13px; color: var(--ink-muted);">فودافون كاش، أورنج، اتصالات، وإنستاباي.</div>
+                  </div>
+                </div>
+                <span class="badge-soon">قريباً</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- ملخص الطلب والزر النهائي -->
+        <div>
+          <div class="form-card" style="position: sticky; top: 100px;">
+            <h2 style="font-size: 20px; font-weight: 800; color: var(--berry); margin-bottom: 16px;">ملخص الطلب</h2>
+
+            <div id="checkout-items-list" style="max-height: 240px; overflow-y: auto; margin-bottom: 16px;">
+              <!-- سيتم ملؤه بواسطة JS -->
+            </div>
+
+            <div class="summary-row">
+              <span>المجموع الفرعي:</span>
+              <span id="checkout-subtotal" style="font-weight: 700;">0 ج.م</span>
+            </div>
+            <div class="summary-row">
+              <span>رسوم الشحن والتوصيل:</span>
+              <span id="checkout-shipping" style="font-weight: 700;">50 ج.م</span>
+            </div>
+            <div class="summary-row total-row">
+              <span>المبلغ الإجمالي للدفع:</span>
+              <span id="checkout-total">0 ج.م</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="btn-submit-order" style="height: 52px; font-size: 18px; margin-bottom: 12px;">
+              تأكيد الطلب الآن
+            </button>
+
+            <div style="background-color: var(--cream); padding: 12px; border-radius: var(--radius-sm); font-size: 13px; color: var(--ink-muted); line-height: 1.6;">
+              ✓ سنرسل لكِ تأكيداً فورياً لطلبك مع إمكانية متابعة الشحنة مباشرة عبر واتساب.<br>
+              ✓ سياسة استرجاع واستبدال مرنة خلال 14 يوماً.
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 La Rose Beauty & Cosmetics. جميع الحقوق محفوظة.</p>
+        <p><a href="index.html">الرئيسية</a> | <a href="shipping.html">الشحن</a> | <a href="returns.html">الاسترجاع</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js" defer></script>
+  <script src="data/products.js" defer></script>
+  <script src="data/routines.js" defer></script>
+  <script src="data/articles.js" defer></script>
+  <script src="js/api.js" defer></script>
+  <script src="js/cart.js" defer></script>
+  <script src="js/app.js" defer></script>
+
+  <script defer>
+    window.addEventListener('DOMContentLoaded', () => {
+      const items = window.Cart.getItems();
+      if (items.length === 0) {
+        window.location.href = 'cart.html';
+        return;
+      }
+
+      // ملء المحافظات من config.js
+      const govSelect = document.getElementById('customerGov');
+      if (govSelect && window.CONFIG && window.CONFIG.governorates) {
+        window.CONFIG.governorates.forEach(g => {
+          const opt = document.createElement('option');
+          opt.value = g;
+          opt.textContent = g;
+          govSelect.appendChild(opt);
+        });
+      }
+
+      // عرض عناصر السلة في الملخص
+      const itemsList = document.getElementById('checkout-items-list');
+      if (itemsList) {
+        itemsList.innerHTML = items.map(item => `
+          <div style="display: flex; justify-content: space-between; font-size: 14px; padding: 8px 0; border-bottom: 1px dashed var(--border-light);">
+            <div>
+              <strong>${item.name}</strong> × ${item.quantity}
+              <div style="font-size: 12px; color: var(--ink-muted);">${item.size}</div>
+            </div>
+            <div style="font-weight: 700; color: var(--berry);">${item.price * item.quantity} ج.م</div>
+          </div>
+        `).join('');
+      }
+
+      // تحديث الأسعار
+      const subtotal = window.Cart.getSubtotal();
+      const shipping = window.Cart.getShippingFee();
+      const total = window.Cart.getTotal();
+
+      document.getElementById('checkout-subtotal').textContent = `${subtotal} ج.م`;
+      document.getElementById('checkout-shipping').textContent = shipping === 0 ? 'مجاناً' : `${shipping} ج.م`;
+      document.getElementById('checkout-total').textContent = `${total} ج.م`;
+
+      // معالجة نموذج الطلب
+      const form = document.getElementById('checkout-form');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const btn = document.getElementById('btn-submit-order');
+        btn.disabled = true;
+        btn.textContent = 'جاري تسجيل الطلب...';
+
+        const orderData = {
+          customer: {
+            name: document.getElementById('customerName').value.trim(),
+            phone: document.getElementById('customerPhone').value.trim(),
+            governorate: document.getElementById('customerGov').value,
+            city: document.getElementById('customerCity').value.trim(),
+            address: document.getElementById('customerAddress').value.trim(),
+            notes: document.getElementById('customerNotes').value.trim()
+          },
+          items: items,
+          subtotal: subtotal,
+          shippingFee: shipping,
+          total: total
+        };
+
+        const createdOrder = await window.API.createOrder(orderData);
+        window.Cart.clear();
+        window.location.href = `order-success.html?orderId=${createdOrder.orderId}`;
+      });
+    });
+  </script>
+</body>
+</html>

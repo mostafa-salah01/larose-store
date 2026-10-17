@@ -1,0 +1,14 @@
+{
+  "name": "larose-store",
+  "version": "1.0.0",
+  "description": "La Rose Beauty & Cosmetics - متجر مستحضرات التجميل والعناية",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "echo 'Static site ready'"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

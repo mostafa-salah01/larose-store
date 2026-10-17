@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Rose Beauty & Cosmetics | متجر العناية بالبشرة والشعر والجمال</title>
+  <meta name="description" content="متجر لا روز لمستحضرات التجميل والعناية الفاخرة - روتينات عناية متكاملة للبشرة والشعر والجسم، منتجات أصلية وشحن سريع حتى باب منزلك مع الدفع عند الاستلام.">
+  <link rel="canonical" href="https://example.com/index.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/index.html">
+  <meta property="og:title" content="La Rose Beauty & Cosmetics | جمالك يبدأ بروتين يناسبك">
+  <meta property="og:description" content="منتجات عناية وتجميل مختارة بعناية وروتينات متكاملة للبشرة والشعر، توصيل سريع ودفع عند الاستلام.">
+  <meta property="og:image" content="images/og-share-image.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="La Rose Beauty & Cosmetics">
+  <meta name="twitter:description" content="منتجات عناية وتجميل مختارة بعناية وروتينات متكاملة للبشرة والشعر، توصيل سريع ودفع عند الاستلام.">
+  <meta name="twitter:image" content="images/og-share-image.jpg">
+
+  <link rel="preload" href="images/larose-logo.png" as="image">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://example.com/#organization",
+        "name": "La Rose Beauty & Cosmetics",
+        "url": "https://example.com",
+        "logo": "https://example.com/images/larose-logo.png",
+        "sameAs": []
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://example.com/#website",
+        "url": "https://example.com",
+        "name": "La Rose Beauty & Cosmetics",
+        "publisher": { "@id": "https://example.com/#organization" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- 1. شريط علوي صغير: رسالة ثقة وشحن -->
+  <div class="top-bar">
+    <span>🚚 توصيل سريع لجميع المحافظات | شحن مجاني للطلبات بقيمة <strong>500 ج.م</strong> أو أكثر | دفع عند الاستلام</span>
+  </div>
+
+  <!-- 2. هيدر ثابت -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <button type="button" class="menu-toggle" aria-label="فتح القائمة">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <a href="index.html" class="site-logo">
+          <img src="images/larose-logo.png" alt="La Rose Beauty & Cosmetics" width="160" height="48">
+        </a>
+
+        <div class="header-search">
+          <form onsubmit="return false;">
+            <input type="search" class="search-input" placeholder="ابحثي عن غسول، سيروم، مرطب، زيت شعر...">
+            <button type="button" class="search-btn" aria-label="بحث">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="header-actions">
+          <a href="contact.html" class="action-btn whatsapp-dynamic-link" title="تواصل عبر واتساب" data-message="مرحباً لا روز، أود الاستفسار عن منتجات العناية">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+          </a>
+          <button type="button" class="action-btn trigger-cart" aria-label="سلة المشتريات" title="السلة">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"></path>
+            </svg>
+            <span class="cart-badge" style="display: none;">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. القائمة الرئيسية -->
+    <nav class="main-nav" aria-label="القائمة الرئيسية">
+      <div class="container">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">الرئيسية</a></li>
+          <li><a href="hair.html">الشعر</a></li>
+          <li><a href="skin.html">البشرة</a></li>
+          <li><a href="body.html">الجسم</a></li>
+          <li><a href="fragrance.html">العطور والمخمريات</a></li>
+          <li class="nav-highlight"><a href="offers.html">العروض والباقات</a></li>
+          <li><a href="new.html">الجديد</a></li>
+          <li><a href="routines.html">اختاري روتينك</a></li>
+          <li><a href="guide.html">دليل الجمال</a></li>
+          <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- القائمة الجانبية للموبايل -->
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-navigation">
+    <div class="mobile-nav-header">
+      <img src="images/larose-logo.png" alt="La Rose Beauty & Cosmetics" height="38">
+      <button type="button" class="btn-close-nav" aria-label="إغلاق القائمة">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-nav-body">
+      <div style="margin-bottom: 16px;">
+        <input type="search" class="search-input" placeholder="ابحثي عن منتج...">
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="active">الرئيسية</a></li>
+        <li><a href="hair.html">الشعر</a></li>
+        <li><a href="skin.html">البشرة</a></li>
+        <li><a href="body.html">الجسم</a></li>
+        <li><a href="fragrance.html">العطور والمخمريات</a></li>
+        <li><a href="offers.html">العروض والباقات 🎁</a></li>
+        <li><a href="new.html">وصل حديثاً ✨</a></li>
+        <li><a href="routines.html">اختاري روتينك 🌸</a></li>
+        <li><a href="guide.html">دليل الجمال</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="contact.html">تواصل وواتساب</a></li>
+      </ul>
+    </div>
+    <div class="mobile-nav-footer">
+      <a href="contact.html" class="btn btn-whatsapp btn-block whatsapp-dynamic-link" data-message="مرحباً لا روز، أود المساعدة في اختيار الروتين المناسب">
+        مساعدة فورية عبر واتساب
+      </a>
+    </div>
+  </aside>
+
+  <!-- 4. الهيرو (الفيديو) -->
+  <section class="hero-section">
+    <div class="hero-video-wrap">
+      <video class="hero-video" autoplay muted loop playsinline poster="images/hero-home-desktop.webp" preload="metadata">
+        <source src="videos/hero-home-desktop.mp4" type="video/mp4" media="(min-width: 768px)">
+        <source src="videos/hero-home-mobile.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-tag">🌸 إطلالتك الطبيعية المتألقة</span>
+        <h1 class="hero-title">جمالك يبدأ بروتين يناسبك</h1>
+        <p class="hero-subtitle">منتجات عناية مختارة بعناية.. وتوصيل لحد باب بيتك</p>
+        <div class="hero-buttons">
+          <a href="#categories-section" class="btn btn-primary">تسوقي الآن</a>
+          <a href="routines.html" class="btn btn-secondary">اختاري روتينك</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. شبكة الأقسام (5 كروت الصور) -->
+  <section class="section" id="categories-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">أقسام المتجر</span>
+        <h2 class="section-title">تصفحي حسب اهتمامك</h2>
+        <p class="section-description">مجموعات عناية متخصصة ومصممة بأعلى جودة لتلبي كل تفاصيل جمالك</p>
+      </div>
+      <div class="categories-grid">
+        <a href="hair.html" class="category-card" title="قسم العناية بالشعر">
+          <img src="images/category-hair.webp" alt="العناية بالشعر La Rose" width="280" height="350" loading="lazy">
+        </a>
+        <a href="skin.html" class="category-card" title="قسم العناية بالبشرة">
+          <img src="images/category-skin.webp" alt="العناية بالبشرة La Rose" width="280" height="350" loading="lazy">
+        </a>
+        <a href="body.html" class="category-card" title="قسم العناية بالجسم">
+          <img src="images/category-body.webp" alt="العناية بالجسم La Rose" width="280" height="350" loading="lazy">
+        </a>
+        <a href="fragrance.html" class="category-card" title="قسم العطور والمخمريات">
+          <img src="images/category-fragrance.webp" alt="العطور والمخمريات La Rose" width="280" height="350" loading="lazy">
+        </a>
+        <a href="offers.html" class="category-card" title="قسم العروض والباقات">
+          <img src="images/category-gifts-bundles.webp" alt="العروض والهدايا La Rose" width="280" height="350" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. أفضل المنتجات مع سبب الاختيار تحت كل منتج -->
+  <section class="section" style="background-color: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">الأكثر طلباً</span>
+        <h2 class="section-title">مختارات لا روز المفضلة</h2>
+        <p class="section-description">منتجات أثبتت جدارتها ونالت إعجاب عميلاتنا بفضل نتائجها الملموسة</p>
+      </div>
+      <div class="products-grid" id="bestsellers-grid">
+        <!-- سيتم ملؤها بواسطة JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. قسم "تسوقي حسب المشكلة" بأيقونات SVG كودية -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">عناية موجهة</span>
+        <h2 class="section-title">تسوقي حسب المشكلة</h2>
+        <p class="section-description">حددي التحدي الذي يواجه بشرتك أو شعرك ودعينا نرشح لك الحل الأنسب</p>
+      </div>
+
+      <div class="problem-tags-wrap">
+        <button type="button" class="problem-chip active" data-filter="all">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+          جميع الحلول
+        </button>
+        <button type="button" class="problem-chip" data-filter="جفاف">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          جفاف وشد
+        </button>
+        <button type="button" class="problem-chip" data-filter="دهنية">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="6"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83"/></svg>
+          دهنية ومسام
+        </button>
+        <button type="button" class="problem-chip" data-filter="هيشان">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242M16 14v6M8 14v6M12 16v6"/></svg>
+          هيشان وتقصف
+        </button>
+        <button type="button" class="problem-chip" data-filter="كيرلي">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          تحديد الكيرلي
+        </button>
+        <button type="button" class="problem-chip" data-filter="تساقط">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          مظهر الفروة والتساقط
+        </button>
+        <button type="button" class="problem-chip" data-filter="حماية من الشمس">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          حماية من الشمس
+        </button>
+      </div>
+
+      <div class="products-grid" id="problem-filtered-grid">
+        <!-- سيتم ملؤها ديناميكياً -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. بانر الباقات الجاهزة ثم الباقات -->
+  <section class="section" style="padding-top: 10px;">
+    <div class="container">
+      <a href="offers.html" class="banner-promo" style="margin-bottom: 32px;" title="عروض وباقات لا روز">
+        <img src="images/banner-offers-bundles.webp" alt="عروض وباقات التوفير La Rose" width="1200" height="400" loading="lazy">
+      </a>
+      <div class="products-grid" id="bundles-grid">
+        <!-- باقات التوفير -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. منتجات جديدة -->
+  <section class="section" style="background-color: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">وصل حديثاً</span>
+        <h2 class="section-title">أحدث إضافات مجموعة لا روز</h2>
+        <p class="section-description">تركيبات مبتكرة تم تطويرها لتعزيز إشراقة يومك</p>
+      </div>
+      <div class="products-grid" id="new-arrivals-grid">
+        <!-- سيتم ملؤها بواسطة JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. بانر "اختاري روتينك" ثم كروت الروتين الخمسة -->
+  <section class="section">
+    <div class="container">
+      <a href="routines.html" class="banner-promo" style="margin-bottom: 36px;" title="دليل اختيار الروتين المناسب">
+        <img src="images/banner-choose-routine.webp" alt="اختاري روتينك La Rose" width="1200" height="400" loading="lazy">
+      </a>
+
+      <div class="section-header">
+        <span class="section-badge">خطوات مدروسة</span>
+        <h2 class="section-title">روتينات مخصصة لكل حاجة</h2>
+        <p class="section-description">كل روتين يحتوي خطوات متناسقة صباحاً ومساءً لتحقيق أفضل تناغم للمنتجات</p>
+      </div>
+
+      <div class="routines-grid">
+        <div class="routine-card">
+          <div class="routine-card-img">
+            <img src="images/routine-dry-hair.webp" alt="روتين الشعر الجاف" width="600" height="340" loading="lazy">
+          </div>
+          <div class="routine-card-body">
+            <span class="routine-card-badge">شعر حريري ولامع</span>
+            <h3 class="routine-card-title">روتين الشعر الجاف والمتقصف</h3>
+            <p class="routine-card-desc">خطوات ترطيب وتغذية مكثفة لأطراف الشعر لحمايته من التقصف والهيشان.</p>
+            <a href="routine-dry-hair.html" class="btn btn-secondary">عرض تفاصيل الروتين</a>
+          </div>
+        </div>
+
+        <div class="routine-card">
+          <div class="routine-card-img">
+            <img src="images/routine-oily-skin.webp" alt="روتين البشرة الدهنية" width="600" height="340" loading="lazy">
+          </div>
+          <div class="routine-card-body">
+            <span class="routine-card-badge">توازن ونقاء</span>
+            <h3 class="routine-card-title">روتين البشرة الدهنية والمختلطة</h3>
+            <p class="routine-card-desc">تنظيم الإفرازات الدهنية وتحسين مظهر المسام مع الحفاظ على ترطيب البشرة.</p>
+            <a href="routine-oily-skin.html" class="btn btn-secondary">عرض تفاصيل الروتين</a>
+          </div>
+        </div>
+
+        <div class="routine-card">
+          <div class="routine-card-img">
+            <img src="images/routine-dry-skin.webp" alt="روتين البشرة الجافة" width="600" height="340" loading="lazy">
+          </div>
+          <div class="routine-card-body">
+            <span class="routine-card-badge">ترطيب عميق وسيراميد</span>
+            <h3 class="routine-card-title">روتين البشرة الجافة والترطيب المكثف</h3>
+            <p class="routine-card-desc">دعم حاجز البشرة الواقي وحبس الرطوبة لمنع الشعور بالشد والتقشر.</p>
+            <a href="routine-dry-skin.html" class="btn btn-secondary">عرض تفاصيل الروتين</a>
+          </div>
+        </div>
+
+        <div class="routine-card">
+          <div class="routine-card-img">
+            <img src="images/routine-curly-hair.webp" alt="روتين الشعر الكيرلي" width="600" height="340" loading="lazy">
+          </div>
+          <div class="routine-card-body">
+            <span class="routine-card-badge">تموجات مرنة وثابتة</span>
+            <h3 class="routine-card-title">روتين الشعر الكيرلي وتحديد التموجات</h3>
+            <p class="routine-card-desc">تكنيك الترطيب وحبس التموجات بزبدة المانجو والكتان دون أي هيشان.</p>
+            <a href="routine-curly-hair.html" class="btn btn-secondary">عرض تفاصيل الروتين</a>
+          </div>
+        </div>
+
+        <div class="routine-card">
+          <div class="routine-card-img">
+            <img src="images/routine-sun-care.webp" alt="روتين الحماية من الشمس" width="600" height="340" loading="lazy">
+          </div>
+          <div class="routine-card-body">
+            <span class="routine-card-badge">حماية واسعة SPF 50+</span>
+            <h3 class="routine-card-title">روتين الحماية من الشمس والعناية النهارية</h3>
+            <p class="routine-card-desc">وقاية من ظهور التصبغات ومظهر الخطوط المبكرة مع إشراقة مخملية غير لامعة.</p>
+            <a href="routine-sun-care.html" class="btn btn-secondary">عرض تفاصيل الروتين</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. قسم الثقة: أصالة، إرجاع واضح، واتساب، توصيل -->
+  <section class="section" style="background-color: var(--white);">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="trust-title">منتجات أصلية وموثوقة</h3>
+          <p class="trust-desc">جميع المنتجات تخضع لفحص دقيق ومعبأة بأعلى معايير النظافة وسلامة التركيب.</p>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 4v6h6M23 20v-6h-6"/>
+              <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/>
+            </svg>
+          </div>
+          <h3 class="trust-title">سياسة إرجاع واستبدال واضحة</h3>
+          <p class="trust-desc">حق الاستبدال خلال 14 يوماً وفق الشروط المقررة لضمان راحتك ورضاك التام.</p>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+          </div>
+          <h3 class="trust-title">دعم استشاري عبر واتساب</h3>
+          <p class="trust-desc">فريقنا معك خطوة بخطوة للإجابة عن تساؤلاتك ومساعدتك في اختيار الروتين الأمثل.</p>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="3" width="15" height="13"/>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <h3 class="trust-title">توصيل سريع ودفع عند الاستلام</h3>
+          <p class="trust-desc">شحن لباب بيتك أينما كنتِ في مصر، مع إمكانية الدفع عند المعاينة والاستلام.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. التقييمات: مساحة حقيقية بدون نجوم أو أرقام وهمية -->
+  <section class="section">
+    <div class="container">
+      <div class="reviews-honest-box">
+        <div class="reviews-icon-circle">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </div>
+        <h3 class="reviews-honest-title">رأيك يصنع الفارق في عائلة لا روز</h3>
+        <p class="reviews-honest-desc">نحن نؤمن بالشفافية المطلقة ولا نضع تقييمات مزيفة. جربي منتجاتنا وشاركينا تجربتك الصادقة لتكوني أول من يضيء هذه المساحة!</p>
+        <a href="contact.html" class="btn btn-secondary">شاركينا تجربتك أو اقتراحك</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. خطوات الطلب والشحن (3 خطوات بسيطة) -->
+  <section class="section" style="background-color: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">تسوق سهل وسلس</span>
+        <h2 class="section-title">كيف تطلبين من لا روز؟</h2>
+        <p class="section-description">تجربة شراء مريحة وسريعة في 3 خطوات بسيطة بدون الحاجة لإنشاء حساب معقد</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3 class="step-title">اختاري منتجاتك أو روتينك</h3>
+          <p class="step-desc">تصفحي الأقسام أو روتينات العناية وأضيفي ما يناسب نوع بشرتك وشعرك إلى السلة بنقرة واحدة.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3 class="step-title">أدخلي بيانات التوصيل</h3>
+          <p class="step-desc">املئي اسمك ورقم هاتفك وعنوانك ومحافظتك في صفحة إتمام الطلب الشفافة بدون أي رسوم خفية.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3 class="step-title">استلمي وادفعي عند الباب</h3>
+          <p class="step-desc">يصلك المندوب بأمان وتدفعين قيمة الطلب نقداً عند الاستلام بكل راحة واطمئنان.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. أحدث مقالات دليل الجمال -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">دليل الجمال</span>
+        <h2 class="section-title">نصائح ومعلومات من خبراء لا روز</h2>
+        <p class="section-description">مقالات مفيدة وعملية لمساعدتك في بناء روتين يومي ناجح ومدروس</p>
+      </div>
+
+      <div class="articles-grid" id="home-articles-grid">
+        <!-- سيتم ملؤها بواسطة JS من data/articles.js -->
+      </div>
+
+      <div style="text-align: center; margin-top: 36px;">
+        <a href="guide.html" class="btn btn-secondary">تصفحي جميع مقالات الدليل</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15. اشتراك اختياري في العروض -->
+  <section class="container">
+    <div class="newsletter-section">
+      <div class="newsletter-content">
+        <h3 class="newsletter-title">انضمي إلى مجتمع لا روز الجميل</h3>
+        <p class="newsletter-desc">اشتركي ليصلك جديد عروض التوفير الأسبوعية وأحدث نصائح العناية عبر البريد الإلكتروني.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="أدخلي بريدك الإلكتروني هنا..." required>
+          <button type="submit" class="btn btn-primary" style="background-color: var(--gold); color: #fff;">اشتراك مجاني</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16. فوتر شامل -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/larose-logo.png" alt="La Rose Beauty & Cosmetics" width="160" height="48">
+          <p>متجر تجميل وعناية نسائي مصري راقٍ يقدم روتينات متكاملة ومختارة بعناية للبشرة والشعر والجسم لتعزيز جمالك الطبيعي.</p>
+          <div style="display: flex; gap: 12px;">
+            <a href="contact.html" class="action-btn" title="واتساب" style="background: rgba(255,255,255,0.1); color: #fff;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">أقسام المتجر</h4>
+          <ul class="footer-links">
+            <li><a href="skin.html">العناية بالبشرة</a></li>
+            <li><a href="hair.html">العناية بالشعر</a></li>
+            <li><a href="body.html">العناية بالجسم</a></li>
+            <li><a href="fragrance.html">العطور والمخمريات</a></li>
+            <li><a href="offers.html">العروض والباقات</a></li>
+            <li><a href="routines.html">اختاري روتينك</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">دليل الجمال والمعلومات</h4>
+          <ul class="footer-links">
+            <li><a href="guide.html">مقالات دليل الجمال</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+            <li><a href="faq.html">الأسئلة الشائعة</a></li>
+            <li><a href="guide-patch-test.html">دليل اختبار الحساسية</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">سياسات المتجر</h4>
+          <ul class="footer-links">
+            <li><a href="shipping.html">سياسة الشحن والتوصيل</a></li>
+            <li><a href="returns.html">سياسة الاسترجاع والاستبدال</a></li>
+            <li><a href="privacy.html">سياسة الخصوصية</a></li>
+            <li><a href="terms.html">الشروط والأحكام</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 La Rose Beauty & Cosmetics. جميع الحقوق محفوظة.</p>
+        <p>تصميم مخصص فائق الأناقة والسرعة على الهاتف المحمول.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="سلة التسوق">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span>سلة مشترياتك</span>
+      </div>
+      <button type="button" class="btn-close-cart" id="btn-close-cart" aria-label="إغلاق السلة">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="free-shipping-meter">
+      <div class="free-shipping-text" id="free-shipping-text">
+        أضيفي منتجات بقيمة <strong>500 ج.م</strong> للحصول على <strong>شحن مجاني</strong>!
+      </div>
+      <div class="free-shipping-bar">
+        <div class="free-shipping-progress" id="free-shipping-progress" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <div class="cart-drawer-items" id="drawer-cart-items">
+      <!-- يتم حقن المنتجات برمجياً -->
+    </div>
+
+    <div class="cart-drawer-footer" id="drawer-cart-footer">
+      <div class="summary-row">
+        <span>المجموع الفرعي:</span>
+        <span id="drawer-subtotal">0 ج.م</span>
+      </div>
+      <div class="summary-row">
+        <span>الشحن:</span>
+        <span id="drawer-shipping">50 ج.م</span>
+      </div>
+      <div class="summary-row total-row">
+        <span>الإجمالي النهائي:</span>
+        <span id="drawer-total">0 ج.م</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <a href="checkout.html" class="btn btn-primary btn-block">متابعة إتمام الطلب</a>
+        <a href="cart.html" class="btn btn-secondary btn-block">عرض السلة كاملة</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="js/config.js" defer></script>
+  <script src="data/products.js" defer></script>
+  <script src="data/routines.js" defer></script>
+  <script src="data/articles.js" defer></script>
+  <script src="js/api.js" defer></script>
+  <script src="js/cart.js" defer></script>
+  <script src="js/app.js" defer></script>
+
+  <!-- الصفحة الرئيسية: تهيئة الأقسام الديناميكية -->
+  <script defer>
+    window.addEventListener('DOMContentLoaded', async () => {
+      // 1. الأكثر مبيعاً
+      const bestSellers = await window.API.getProducts({ isBestSeller: true, limit: 4 });
+      const bestGrid = document.getElementById('bestsellers-grid');
+      if (bestGrid) {
+        bestGrid.innerHTML = bestSellers.map(p => window.App.renderProductCard(p)).join('');
+      }
+
+      // 2. الفلترة حسب المشكلة
+      const allProblemProducts = await window.API.getProducts({ limit: 8 });
+      const problemGrid = document.getElementById('problem-filtered-grid');
+      if (problemGrid) {
+        problemGrid.innerHTML = allProblemProducts.map(p => window.App.renderProductCard(p)).join('');
+      }
+
+      const problemChips = document.querySelectorAll('.problem-chip');
+      problemChips.forEach(chip => {
+        chip.addEventListener('click', async () => {
+          problemChips.forEach(c => c.classList.remove('active'));
+          chip.classList.add('active');
+          const filter = chip.getAttribute('data-filter');
+          let filtered = [];
+          if (filter === 'all') {
+            filtered = await window.API.getProducts({ limit: 8 });
+          } else {
+            filtered = await window.API.getProducts({ problem: filter, limit: 8 });
+          }
+          if (problemGrid) {
+            problemGrid.innerHTML = filtered.length > 0 
+              ? filtered.map(p => window.App.renderProductCard(p)).join('')
+              : '<p style="grid-column: 1/-1; text-align: center; color: var(--ink-muted); padding: 40px;">لا توجد منتجات مطابقة لهذا الفلتر حالياً.</p>';
+          }
+        });
+      });
+
+      // 3. باقات التوفير
+      const bundles = await window.API.getProducts({ category: 'gifts-bundles', limit: 4 });
+      const bundlesGrid = document.getElementById('bundles-grid');
+      if (bundlesGrid) {
+        bundlesGrid.innerHTML = bundles.map(p => window.App.renderProductCard(p)).join('');
+      }
+
+      // 4. جديدنا
+      const newItems = await window.API.getProducts({ isNew: true, limit: 4 });
+      const newGrid = document.getElementById('new-arrivals-grid');
+      if (newGrid) {
+        newGrid.innerHTML = newItems.map(p => window.App.renderProductCard(p)).join('');
+      }
+
+      // 5. مقالات الدليل
+      const articles = await window.API.getArticles();
+      const articlesGrid = document.getElementById('home-articles-grid');
+      if (articlesGrid) {
+        articlesGrid.innerHTML = articles.slice(0, 3).map(art => `
+          <article class="article-card">
+            <div class="article-img-wrap">
+              <img src="${art.image}" alt="${art.title}" width="400" height="225" loading="lazy">
+            </div>
+            <div class="article-body">
+              <div class="article-meta">
+                <span class="article-meta-cat">${art.categoryName}</span>
+                <span>•</span>
+                <span>${art.readTime}</span>
+              </div>
+              <h3 class="article-title"><a href="${art.htmlFile}">${art.title}</a></h3>
+              <p class="article-excerpt">${art.excerpt}</p>
+              <a href="${art.htmlFile}" class="article-read-more">اقرئي المقال كاملاً ←</a>
+            </div>
+          </article>
+        `).join('');
+      }
+    });
+  </script>
+</body>
+</html>
