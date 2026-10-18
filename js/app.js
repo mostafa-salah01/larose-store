@@ -1,7 +1,7 @@
 /**
  * La Rose Beauty & Cosmetics - Main Application Controller
  * =========================================================================
- * التفاعل العام مع الواجهة، الهيدر، الفلاتر، صفحات الأقسام والمنتج والدفع
+ * التفاعل العام مع الواجهة، الهيدر، القائمة الجانبية للموبايل، الفلاتر، والسلة
  * =========================================================================
  */
 
@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const App = {
   init() {
+    this.ensureMobileNav();
+    this.ensureCartDrawer();
+    this.ensureFooterCredits();
     this.setupHeader();
     this.setupDrawerEvents();
     this.setupSearch();
@@ -20,13 +23,145 @@ const App = {
     this.highlightActiveNav();
   },
 
+  /**
+   * التأكد من وجود القائمة الجانبية المتنقلة للموبايل في جميع الصفحات
+   * وحقنها تلقائياً إن لم تكن متواجدة لضمان عمل زر القائمة على الهاتف 100%
+   */
+  ensureMobileNav() {
+    let overlay = document.querySelector('.mobile-nav-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'mobile-nav-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    let mobileNav = document.querySelector('.mobile-navigation');
+    if (!mobileNav) {
+      mobileNav = document.createElement('aside');
+      mobileNav.className = 'mobile-navigation';
+      mobileNav.innerHTML = `
+        <div class="mobile-nav-header">
+          <img src="images/larose-logo.png" alt="La Rose Beauty & Cosmetics" height="38">
+          <button type="button" class="btn-close-nav" aria-label="إغلاق القائمة">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="mobile-nav-body">
+          <div style="margin-bottom: 16px;">
+            <input type="search" class="search-input" placeholder="ابحثي عن منتج...">
+          </div>
+          <ul class="mobile-nav-list">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="hair.html">الشعر</a></li>
+            <li><a href="skin.html">البشرة</a></li>
+            <li><a href="body.html">الجسم</a></li>
+            <li><a href="fragrance.html">العطور والمخمريات</a></li>
+            <li><a href="offers.html">العروض والباقات 🎁</a></li>
+            <li><a href="new.html">وصل حديثاً ✨</a></li>
+            <li><a href="routines.html">اختاري روتينك 🌸</a></li>
+            <li><a href="guide.html">دليل الجمال</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="contact.html">تواصل وواتساب</a></li>
+          </ul>
+        </div>
+        <div class="mobile-nav-footer">
+          <a href="contact.html" class="btn btn-whatsapp btn-block whatsapp-dynamic-link" data-message="مرحباً لا روز، أود المساعدة في اختيار الروتين المناسب">
+            مساعدة فورية عبر واتساب
+          </a>
+        </div>
+      `;
+      document.body.appendChild(mobileNav);
+    }
+  },
+
+  /**
+   * التأكد من وجود درج السلة في كل الصفحات
+   */
+  ensureCartDrawer() {
+    let overlay = document.getElementById('cart-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'cart-overlay';
+      overlay.className = 'cart-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    let drawer = document.getElementById('cart-drawer');
+    if (!drawer) {
+      drawer = document.createElement('aside');
+      drawer.id = 'cart-drawer';
+      drawer.className = 'cart-drawer';
+      drawer.setAttribute('aria-label', 'سلة التسوق');
+      drawer.innerHTML = `
+        <div class="cart-drawer-header">
+          <div class="cart-drawer-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/>
+            </svg>
+            <span>سلة مشترياتك</span>
+          </div>
+          <button type="button" class="btn-close-cart" id="btn-close-cart" aria-label="إغلاق السلة">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="free-shipping-meter">
+          <div class="free-shipping-text" id="free-shipping-text">
+            أضيفي منتجات بقيمة <strong>500 ج.م</strong> للحصول على <strong>شحن مجاني</strong>!
+          </div>
+          <div class="free-shipping-bar">
+            <div class="free-shipping-progress" id="free-shipping-progress" style="width: 0%;"></div>
+          </div>
+        </div>
+        <div class="cart-drawer-items" id="drawer-cart-items"></div>
+        <div class="cart-drawer-footer" id="drawer-cart-footer">
+          <div class="summary-row">
+            <span>المجموع الفرعي:</span>
+            <span id="drawer-subtotal">0 ج.م</span>
+          </div>
+          <div class="summary-row">
+            <span>الشحن:</span>
+            <span id="drawer-shipping">50 ج.م</span>
+          </div>
+          <div class="summary-row total-row">
+            <span>الإجمالي النهائي:</span>
+            <span id="drawer-total">0 ج.م</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="checkout.html" class="btn btn-primary btn-block">متابعة إتمام الطلب</a>
+            <a href="cart.html" class="btn btn-secondary btn-block">عرض السلة كاملة</a>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(drawer);
+    }
+  },
+
+  /**
+   * إضافة توقيع المطور في أسفل كل الصفحات
+   */
+  ensureFooterCredits() {
+    const footers = document.querySelectorAll('.footer-bottom');
+    footers.forEach(footer => {
+      let devCredit = footer.querySelector('.developer-credit');
+      if (!devCredit) {
+        devCredit = document.createElement('p');
+        devCredit.className = 'developer-credit';
+        devCredit.innerHTML = `صنع بواسطة <strong style="color: var(--pink);">Webstak</strong> | <a href="tel:01205798302" dir="ltr" style="color: var(--gold); font-weight: 700; text-decoration: underline;">01205798302</a>`;
+        footer.appendChild(devCredit);
+      }
+    });
+  },
+
   setupHeader() {
     const header = document.querySelector('.site-header');
-    const menuToggle = document.querySelector('.menu-toggle');
-    const mobileNav = document.querySelector('.mobile-navigation');
-    const mobileOverlay = document.querySelector('.mobile-nav-overlay');
 
-    // تظليل الهيدر عند النزول
+    // تأثير الهيدر عند التمرير
     window.addEventListener('scroll', () => {
       if (window.scrollY > 40) {
         header?.classList.add('scrolled');
@@ -35,65 +170,104 @@ const App = {
       }
     }, { passive: true });
 
-    // القائمة الجانبية للموبايل
-    if (menuToggle && mobileNav && mobileOverlay) {
-      menuToggle.addEventListener('click', () => {
-        mobileNav.classList.toggle('active');
-        mobileOverlay.classList.toggle('active');
-        document.body.classList.toggle('nav-open');
-      });
+    // استماع شامل للنقر على زر القائمة المتنقلة للموبايل
+    document.addEventListener('click', (e) => {
+      const toggle = e.target.closest('.menu-toggle');
+      if (toggle) {
+        e.preventDefault();
+        this.toggleMobileNav();
+        return;
+      }
 
-      mobileOverlay.addEventListener('click', () => {
-        mobileNav.classList.remove('active');
-        mobileOverlay.classList.remove('active');
-        document.body.classList.remove('nav-open');
-      });
+      const close = e.target.closest('.btn-close-nav, .mobile-nav-overlay');
+      if (close) {
+        e.preventDefault();
+        this.closeMobileNav();
+        return;
+      }
 
-      const closeBtn = mobileNav.querySelector('.btn-close-nav');
-      closeBtn?.addEventListener('click', () => {
-        mobileNav.classList.remove('active');
-        mobileOverlay.classList.remove('active');
-        document.body.classList.remove('nav-open');
-      });
+      // إغلاق القائمة عند النقر على أي رابط بداخلها
+      const navLink = e.target.closest('.mobile-nav-list a');
+      if (navLink) {
+        this.closeMobileNav();
+      }
+    });
+  },
+
+  toggleMobileNav() {
+    const mobileNav = document.querySelector('.mobile-navigation');
+    const mobileOverlay = document.querySelector('.mobile-nav-overlay');
+    if (mobileNav && mobileOverlay) {
+      const isActive = mobileNav.classList.contains('active');
+      if (isActive) {
+        this.closeMobileNav();
+      } else {
+        this.openMobileNav();
+      }
     }
   },
 
-  setupDrawerEvents() {
-    const overlay = document.getElementById('cart-overlay');
-    const closeBtn = document.getElementById('btn-close-cart');
-    const cartTriggers = document.querySelectorAll('.trigger-cart');
+  openMobileNav() {
+    const mobileNav = document.querySelector('.mobile-navigation');
+    const mobileOverlay = document.querySelector('.mobile-nav-overlay');
+    mobileNav?.classList.add('active');
+    mobileOverlay?.classList.add('active');
+    document.body.classList.add('nav-open');
+  },
 
-    cartTriggers.forEach(btn => {
-      btn.addEventListener('click', (e) => {
+  closeMobileNav() {
+    const mobileNav = document.querySelector('.mobile-navigation');
+    const mobileOverlay = document.querySelector('.mobile-nav-overlay');
+    mobileNav?.classList.remove('active');
+    mobileOverlay?.classList.remove('active');
+    document.body.classList.remove('nav-open');
+  },
+
+  setupDrawerEvents() {
+    // استماع شامل لأزرار فتح وإغلاق السلة
+    document.addEventListener('click', (e) => {
+      const trigger = e.target.closest('.trigger-cart');
+      if (trigger) {
         e.preventDefault();
         window.Cart?.openDrawer();
-      });
-    });
+        return;
+      }
 
-    overlay?.addEventListener('click', () => {
-      window.Cart?.closeDrawer();
-    });
-
-    closeBtn?.addEventListener('click', () => {
-      window.Cart?.closeDrawer();
+      const close = e.target.closest('#btn-close-cart, #cart-overlay');
+      if (close) {
+        e.preventDefault();
+        window.Cart?.closeDrawer();
+      }
     });
   },
 
   setupSearch() {
-    const searchInputs = document.querySelectorAll('.search-input');
-    searchInputs.forEach(input => {
-      input.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' && input.value.trim().length > 0) {
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const input = e.target.closest('.search-input');
+        if (input && input.value.trim().length > 0) {
           e.preventDefault();
           const query = encodeURIComponent(input.value.trim());
           window.location.href = `skin.html?search=${query}`;
         }
-      });
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.search-btn');
+      if (btn) {
+        const form = btn.closest('form');
+        const input = form?.querySelector('.search-input');
+        if (input && input.value.trim().length > 0) {
+          e.preventDefault();
+          const query = encodeURIComponent(input.value.trim());
+          window.location.href = `skin.html?search=${query}`;
+        }
+      }
     });
   },
 
   setupQuickLinks() {
-    // تحديث أي رابط واتساب بالرقم من config.js
     const waLinks = document.querySelectorAll('.whatsapp-dynamic-link');
     if (window.CONFIG && window.CONFIG.whatsappNumber) {
       const num = window.CONFIG.whatsappNumber;
@@ -136,20 +310,31 @@ const App = {
   },
 
   /**
-   * دالة مساعدة لإنشاء بطاقة منتج HTML متوافقة مع كل الأجهزة
-   * تعرض صورة بديلة أنيقة بالـ SVG إذا لم تتوفر الصورة بعد
+   * دالة إنشاء بطاقة المنتج لعرض الصور الحقيقية الفاخرة لجميع المنتجات
    */
   renderProductCard(product) {
     const hasDiscount = product.oldPrice && product.oldPrice > product.price;
     const discountPercent = hasDiscount ? Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100) : 0;
-    
+    const primaryImage = (product.images && product.images[0]) || '';
+
     return `
       <article class="product-card" data-slug="${product.slug}" data-category="${product.category}">
         <div class="product-card-top">
           ${product.isNew ? '<span class="badge badge-new">جديد</span>' : ''}
           ${hasDiscount ? `<span class="badge badge-sale">-${discountPercent}%</span>` : ''}
           <a href="product.html?slug=${product.slug}" class="product-img-wrapper" title="${product.name}">
-            <div class="product-svg-placeholder">
+            ${primaryImage ? `
+              <img 
+                src="${primaryImage}" 
+                alt="${product.name}" 
+                class="product-img" 
+                loading="lazy" 
+                width="400" 
+                height="400"
+                onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              >
+            ` : ''}
+            <div class="product-svg-placeholder" style="${primaryImage ? 'display: none;' : ''}">
               <svg viewBox="0 0 100 100" class="rose-vector" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="50" cy="50" r="46" fill="#FDF7F4" stroke="#EBDED2" stroke-width="1.5"/>
                 <path d="M50 22C42 22 34 30 34 40C34 52 48 64 50 78C52 64 66 52 66 40C66 30 58 22 50 22Z" fill="#E85A8C" fill-opacity="0.15" stroke="#E85A8C" stroke-width="1.8"/>
